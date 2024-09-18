@@ -1,0 +1,95 @@
+
+.loginHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 8%;
+}
+
+.loginCard{
+    border: 2px solid #1E201E;
+    border-radius: 10px;
+    width: 600px;
+    background-color: #fae8df;
+}
+
+.cardHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.usernameLabel{
+    margin-bottom: 20px;
+}
+
+#username{
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    background-color: transparent;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#username:focus{
+    outline: none;
+}
+
+.passwordLabel{
+    margin-bottom: 20px;
+}
+
+#password{
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    background-color: transparent;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#password:focus{
+    outline: none;
+}
+
+.loginbtn{
+    width: 40%;
+    padding: 10px;
+    /* background-color: rgb(99, 77, 243); */
+    background-color: #7695FF;
+    color: rgb(26, 24, 24);
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.register-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    cursor: pointer;
+    border-bottom: 1px solid blue;
+    color: blue;
+}

@@ -1,0 +1,33 @@
+<h1 class="home-heading">Welcome {{ username }}</h1>
+
+<div class="form-div">
+    <div class="form-card">
+        <form [formGroup]="attendanceForm" (ngSubmit)="submitAttendance()">
+            <input type="radio" value="checkIn" name="title" formControlName="title">Check In
+            <input type="radio" value="checkOut" name="title" formControlName="title">Check Out
+            <div class="btn-div">
+                <button class="submit-btn" type="submit">Submit Attendance</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<table class="att-table" border="1px solid black">
+    <tr class="tablehead">
+        <th>Date</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+    </tr>
+    @for (detail of userDetails; track detail.id) {
+        <tr class="tabledata">
+            <td>{{detail.date}}</td>
+            <td>{{detail.checkIn}}</td>
+            <td>{{detail.checkOut}}</td>
+        </tr>
+    }
+</table>
+
+<div class="logout-div">
+    <button class="logout-btn" type="submit" (click)="logout()">Logout</button>
+</div>

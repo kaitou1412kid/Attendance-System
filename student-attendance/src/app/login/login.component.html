@@ -1,0 +1,22 @@
+<h1 class="loginHeading">Welcome to Student Attendance System</h1>
+
+<div class="body">
+    <div class="loginCard">
+        <h1 class="cardHeading">Login</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="loginForm">
+            <!-- <label for="username" class="usernameLabel"> -->
+                <input id="username" type="text" formControlName="username" placeholder="Enter username">
+            <!-- </label> -->
+            
+            <!-- <label for="password" class="passwordLabel"> -->
+                <input id="password" type="password" formControlName="password" placeholder="Enter password">
+            <!-- </label> -->
+            
+            <button type="submit" [disabled]="!loginForm.valid" class="loginbtn">Login</button>
+        </form>
+        <div class="register-div">
+            
+            <p>Don't have an account? <a (click)="registerBtn()">Register here</a></p>
+        </div>
+    </div>
+</div>
