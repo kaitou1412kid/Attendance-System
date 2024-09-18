@@ -1,0 +1,15 @@
+type Query{
+    getAllStudent: [Student]
+}
+
+type Student{
+    id: ID
+    name: String
+    password: String
+    checkIn: String
+    checkOut: String
+}
+
+type Mutation{
+    addStudent(id: ID, name: String, password: String, checkIn: String, checkOut: String): Student
+}
