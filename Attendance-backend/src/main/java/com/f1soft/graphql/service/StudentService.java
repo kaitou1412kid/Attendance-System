@@ -105,39 +105,6 @@ public class StudentService {
         return responseObject;
     }
 
-//    public ResponseObject setCheckIn(String checkIn, Long studentId) {
-//        List<Attendance> attendanceList = attendanceRepository.findByStudentId(studentId);
-//        Student student = studentRepository.findById(studentId).get();
-//        ResponseObject responseObject = new ResponseObject();
-//        Map<String,String> timeData = new HashMap<>();
-//        if(attendanceList != null) {
-//            for(Attendance attendance : attendanceList) {
-//                if(attendance.getCheckIn().equals(checkIn)) {
-//                    responseObject.setStatus(200);
-//                    responseObject.setMessage("Already checkedIn.");
-//                    timeData.put("checkIn", attendance.getCheckIn());
-//                    responseObject.setData(timeData);
-//                    return responseObject;
-//                }
-//            }
-//            Attendance attendance = new Attendance();
-//            attendance.setStudent(student);
-//            attendance.setDate(LocalDate.now().toString());
-//            attendance.setCheckIn(checkIn);
-//            attendanceRepository.save(attendance);
-//            responseObject.setStatus(200);
-//            responseObject.setMessage("CheckIn Time successfully updated.");
-//            timeData.put("checkIn", checkIn);
-//            responseObject.setData(timeData);
-//            return responseObject;
-//        }else{
-//            responseObject.setStatus(400);
-//            responseObject.setMessage("Student does not exist.");
-//            responseObject.setData(null);
-//            return responseObject;
-//        }
-//    }
-
     public ResponseObject setCheckout(String checkOut, Long studentId){
         Optional<Student> std = studentRepository.findById(studentId);
         ResponseObject responseObject = new ResponseObject();
